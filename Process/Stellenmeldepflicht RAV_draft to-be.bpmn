@@ -11,7 +11,7 @@
     <bpmn:messageFlow id="MessageFlow_1bl9xzw" sourceRef="Participant_02nq1qq" targetRef="Activity_1csa7c2" />
     <bpmn:messageFlow id="MessageFlow_091kisy" sourceRef="Activity_09ons1l" targetRef="Participant_09o1app" />
     <bpmn:messageFlow id="MessageFlow_0wuylwk" sourceRef="Activity_065xmp3" targetRef="Participant_02nq1qq" />
-    <bpmn:messageFlow id="MessageFlow_1n4nmv1" name="receive applications" sourceRef="Participant_09o1app" targetRef="Activity_0ywskgv" />
+    <bpmn:messageFlow id="MessageFlow_1n4nmv1" name="receive application" sourceRef="Participant_09o1app" targetRef="Activity_0ywskgv" />
     <bpmn:messageFlow id="MessageFlow_0yxatdv" name="receive applications" sourceRef="Participant_09o1app" targetRef="Activity_06xuml2" />
   </bpmn:collaboration>
   <bpmn:process id="Process_0j7abu5" isExecutable="true">
@@ -613,7 +613,7 @@
         <di:waypoint x="820" y="190" />
         <di:waypoint x="820" y="560" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="830" y="372" width="59" height="27" />
+          <dc:Bounds x="833" y="372" width="53" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1kdy47p_di" bpmnElement="Flow_1kdy47p">
