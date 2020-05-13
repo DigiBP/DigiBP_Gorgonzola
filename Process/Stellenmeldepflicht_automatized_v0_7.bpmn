@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1wu0gi6" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.3">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1wu0gi6" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.0">
   <bpmn:collaboration id="Collaboration_0wanlm7">
-    <bpmn:participant id="Participant_0ljn8gs" name="SBB" processRef="Process_BIS50" />
+    <bpmn:participant id="Participant_0ljn8gs" name="SBB" processRef="Process_automatized_07" />
     <bpmn:participant id="Participant_19pjij5" name="RAV" processRef="Process_1ihc1mn" />
     <bpmn:participant id="Participant_0qn7o8i" name="Applicant" processRef="Process_19cb7qf" />
     <bpmn:messageFlow id="Flow_11febn8" sourceRef="Activity_0hxorgn" targetRef="Participant_19pjij5" />
@@ -10,7 +10,7 @@
     <bpmn:messageFlow id="Flow_10qfvcx" sourceRef="Activity_1nl2v08" targetRef="Participant_0qn7o8i" />
     <bpmn:messageFlow id="Flow_1bm39ot" sourceRef="Activity_0x0evwv" targetRef="Participant_19pjij5" />
   </bpmn:collaboration>
-  <bpmn:process id="Process_BIS50" isExecutable="true">
+  <bpmn:process id="Process_automatized_07" isExecutable="true">
     <bpmn:laneSet id="LaneSet_02uwxu5">
       <bpmn:lane id="Lane_1boe8p9" name="Boss">
         <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
@@ -262,11 +262,6 @@ JobTitleOnList = object.contained;</camunda:script>
       </bpmn:timerEventDefinition>
     </bpmn:intermediateCatchEvent>
     <bpmn:userTask id="Activity_1r8zpcm" name="Review external applications">
-      <bpmn:extensionElements>
-        <camunda:formData>
-          <camunda:formField id="ElegibleInternalCandidate" label="Elegible internal candidate" type="boolean" />
-        </camunda:formData>
-      </bpmn:extensionElements>
       <bpmn:incoming>Flow_1py694j</bpmn:incoming>
       <bpmn:outgoing>Flow_0df0exx</bpmn:outgoing>
     </bpmn:userTask>
@@ -301,7 +296,7 @@ JobTitleOnList = object.contained;</camunda:script>
       <bpmn:extensionElements>
         <camunda:connector>
           <camunda:inputOutput>
-            <camunda:inputParameter name="url">https://hook.integromat.com/6r2bunhv76x5dmxdhmjgpohn9eefxvu4</camunda:inputParameter>
+            <camunda:inputParameter name="url">https://hook.integromat.com/za95099t8r4yb4fjzsln38pdfskhsd7s</camunda:inputParameter>
             <camunda:inputParameter name="headers">
               <camunda:map>
                 <camunda:entry key="Content-Type">application/json</camunda:entry>
@@ -678,6 +673,9 @@ JobTitleOnList = object.contained;</camunda:script>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
         <dc:Bounds x="222" y="982" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="216" y="1025" width="52" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0hxorgn_di" bpmnElement="Activity_0hxorgn">
         <dc:Bounds x="1490" y="564" width="100" height="80" />
