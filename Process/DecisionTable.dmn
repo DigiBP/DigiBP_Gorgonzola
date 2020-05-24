@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0lxp9sl" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.7.3">
+  <decision id="RoutingAndExperienceDecision" name="Routing and Experience Decision">
+    <extensionElements>
+      <biodi:bounds x="160" y="80" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="ANY">
+      <input id="input_1" label="Experience Level" camunda:inputVariable="jobExperienceLevel">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Executive Job Position" name="executiveJobPosition" typeRef="boolean" />
+      <output id="OutputClause_0z8f3w8" label="Years of Experience" name="jobExperienceYears" typeRef="string" />
+      <rule id="DecisionRule_0aqjmc8">
+        <inputEntry id="UnaryTests_19n0bqx">
+          <text>"Internship"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dsjlck">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v0702g">
+          <text>"no experience required"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zbq0ww">
+        <inputEntry id="UnaryTests_0hy3tkq">
+          <text>"Entry level"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0v8q6w0">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wji9jc">
+          <text>"no experience required"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r9vxhl">
+        <inputEntry id="UnaryTests_0z5m99q">
+          <text>"Associate"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fcou4c">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jqkzwl">
+          <text>"equal or more than 3 years of experience"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_054hdsg">
+        <inputEntry id="UnaryTests_0rpnkfh">
+          <text>"Mid-Senior level"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0htkupe">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ksyh61">
+          <text>"equal or more than 5 years of experience"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14qgvrj">
+        <inputEntry id="UnaryTests_0brxnkp">
+          <text>"Director"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pi8yah">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kc4c1f">
+          <text>"equal or more than 7 years of experience"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18f7zir">
+        <inputEntry id="UnaryTests_0dnm1dy">
+          <text>"Executive"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xqamha">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rtrr51">
+          <text>"equal or more than 10 years of experience"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
