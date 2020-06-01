@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1i43xnd" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.3">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1i43xnd" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.0">
   <bpmn:collaboration id="Collaboration_07u0t98">
     <bpmn:participant id="Participant_1lfn0o8" name="SBB" processRef="JobTitleNotificationProcess" />
     <bpmn:participant id="Participant_1iyttie" name="RAV" processRef="Process_1cxt9tv" />
@@ -8,7 +8,7 @@
   </bpmn:collaboration>
   <bpmn:process id="JobTitleNotificationProcess" isExecutable="true">
     <bpmn:laneSet id="LaneSet_1d55pv9">
-      <bpmn:lane id="Lane_13iik95" name="Human Resources">
+      <bpmn:lane id="Lane_13iik95" name="Human Resources Recruiter">
         <bpmn:flowNodeRef>Activity_15nbgs1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_0n51h56</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Gateway_0fbrh3d</bpmn:flowNodeRef>
@@ -25,26 +25,7 @@
         <bpmn:flowNodeRef>Gateway_0jo6jj0</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_12ch4bx</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Activity_0bntazs</bpmn:flowNodeRef>
-        <bpmn:childLaneSet id="LaneSet_0ytrova">
-          <bpmn:lane id="Lane_0zb2zsh">
-            <bpmn:flowNodeRef>Activity_15nbgs1</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Gateway_0n51h56</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Gateway_0fbrh3d</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Gateway_0e19ap7</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Activity_05gfbci</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Activity_1fuoq77</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Event_1w0v5rg</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Gateway_0hvh0y4</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Event_0wply7e</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Event_12mbw6t</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Event_0nc3u3d</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Gateway_1akzfzf</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Activity_1ule37g</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Gateway_0jo6jj0</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Activity_12ch4bx</bpmn:flowNodeRef>
-            <bpmn:flowNodeRef>Activity_0bntazs</bpmn:flowNodeRef>
-          </bpmn:lane>
-        </bpmn:childLaneSet>
+        <bpmn:childLaneSet id="LaneSet_0ytrova" />
       </bpmn:lane>
       <bpmn:lane id="Lane_01k8t58" name="Line Manager">
         <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
@@ -333,9 +314,6 @@ jobPublicationLink = object.link;</camunda:script>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_13iik95_di" bpmnElement="Lane_13iik95" isHorizontal="true">
         <dc:Bounds x="190" y="282" width="1930" height="596" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0zb2zsh_di" bpmnElement="Lane_0zb2zsh" isHorizontal="true">
-        <dc:Bounds x="220" y="282" width="1900" height="596" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_09xorwl_di" bpmnElement="Flow_09xorwl">
         <di:waypoint x="1498" y="536" />
