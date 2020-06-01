@@ -35,7 +35,6 @@ function triggerProcess(businesskey, message, intend) {
   var data = {
     'messageName': 'Inbound_Message_RAV_Answer',
     'businessKey': businesskey,
-    'tenantId': 'BIS50',
     'processVariables': {
       'RAVAnswer': {'value': intend, 'type': 'String'},
       'RAVEmailAnswer': {'value': message, 'type': 'String'},
@@ -47,10 +46,12 @@ function triggerProcess(businesskey, message, intend) {
     'contentType': 'application/json',
     'payload' : JSON.stringify(data)
   };
-  Logger.log(data);
-  Logger.log(options);
-  Logger.log(JSON.stringify(options));
-  UrlFetchApp.fetch('https://teamgorgonzola.herokuapp.com/rest/message', options);
+  var url = 'https://teamgorgonzola.herokuapp.com/rest/message';
+  console.log('url ', url);
+  console.log('data ',data);
+  console.log('options ',options);
+  console.log(JSON.stringify(options));
+  UrlFetchApp.fetch(url, options);
 }
 
 //https://mashe.hawksey.info/2018/10/introduction-to-building-conversational-interfaces-with-dialogflow-in-google-apps-script-powered-google-hangouts-chat-bots/

@@ -1,5 +1,5 @@
 {
-    "name": "Send Request To RAV (INTG-03)",
+    "name": "Send email to RAV (INT-04)",
     "flow": [
         {
             "id": 1,
@@ -33,7 +33,44 @@
                         "label": "Maximum number of results"
                     }
                 ],
-                "interface": []
+                "interface": [
+                    {
+                        "name": "jobContractType",
+                        "type": "text"
+                    },
+                    {
+                        "name": "jobEmploymentType",
+                        "type": "text"
+                    },
+                    {
+                        "name": "jobExperienceLevel",
+                        "type": "text"
+                    },
+                    {
+                        "name": "jobExperienceYears",
+                        "type": "text"
+                    },
+                    {
+                        "name": "jobLocation",
+                        "type": "text"
+                    },
+                    {
+                        "name": "jobRequirements",
+                        "type": "text"
+                    },
+                    {
+                        "name": "jobTitle",
+                        "type": "text"
+                    },
+                    {
+                        "name": "jobPublicationLink",
+                        "type": "text"
+                    },
+                    {
+                        "name": "caseReference",
+                        "type": "text"
+                    }
+                ]
             }
         },
         {
@@ -46,11 +83,11 @@
             "mapper": {
                 "cc": [],
                 "to": [
-                    "team.gorgonzola+rav@gmail.com"
+                    "eliane.brufatto@students.fhnw.ch"
                 ],
                 "bcc": [],
                 "from": "",
-                "html": "Dear RAV<br/>\nWe would like to employ someone with the job title \"<b>{{1.jobTitle}}</b>\".<br/>\nSince this position is Stellenmeldepflichtig, I’m attating the requirements.<br/><br/>\n<b>{{1.jobRequirements}}</b>\n<br/>\nMay I ask you to check if this position is eligble to posted, registered.. blablab<br/><br/>\n\nCheers,<br/>\n...\n\nPlease reply with the reference {{1.caseReference}}",
+                "html": "Dear RAV<br/>\nWe would like to employ someone with the job title \"<b>{{1.jobTitle}}</b>\".<br/>\nSince this position is subject to notification, please find the details below:<br/>\nConditions: {{1.jobContractType}}\n{{1.jobEmploymentType}}<br/>\nExperience: {{1.jobExperienceLevel}}, {{1.jobExperienceYears}}<br/>\nLocation: {{1.jobLocation}}<br/>\nRequirements: {{1.jobRequirements}}<br/>\n<br/>\nLink for job publication: {{1.jobPublicationLink}}\n<br/>\nMay I kindly ask you to let us know if we can publish the position right away or if we have to wait.<br/>\n<br/>\nThank you and best regards,<br/>\nSBB HR<br/>\n<br/>\nPlease reply with the reference {{1.caseReference}}",
                 "subject": "Report Job Position (Ref: {{1.caseReference}})",
                 "attachments": []
             },

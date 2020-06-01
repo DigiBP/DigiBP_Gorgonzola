@@ -1,12 +1,12 @@
 {
-    "name": "Publish to Internal Job Portal (INTG-01)",
+    "name": "Publish on the external portal (INT-06)",
     "flow": [
         {
             "id": 1,
             "module": "gateway:CustomWebHook",
             "version": 1,
             "parameters": {
-                "hook": 384988,
+                "hook": 385001,
                 "maxResults": 2
             },
             "mapper": {},
@@ -17,7 +17,7 @@
                 },
                 "restore": {
                     "hook": {
-                        "label": "publishOnInternalJobPortal"
+                        "label": "PublishOnExternalJobPortal"
                     }
                 },
                 "parameters": [
@@ -50,9 +50,15 @@
                     "0": "{{1.jobTitle}}",
                     "1": "{{1.jobRequirements}}",
                     "2": "{{now}}",
-                    "3": "{{1.caseReference}}"
+                    "3": "{{1.caseReference}}",
+                    "4": "{{1.jobPublicationLink}}",
+                    "5": "{{1.jobContractType}}",
+                    "6": "{{1.jobEmploymentType}}",
+                    "7": "{{1.jobExperienceLevel}}",
+                    "8": "{{1.jobExperienceYears}}",
+                    "9": "{{1.jobLocation}}"
                 },
-                "sheetId": "InternalJobs",
+                "sheetId": "ExternalJobs",
                 "spreadsheetId": "1KNyCFjy7IsU_U4rvr7gN48X4yQlhZGm8Lbqy_8JrWIs",
                 "includesHeaders": true,
                 "insertDataOption": "INSERT_ROWS",
@@ -68,10 +74,10 @@
                         "label": "Select spreadsheet and sheet"
                     },
                     "sheetId": {
-                        "label": "InternalJobs"
+                        "label": "ExternalJobs"
                     },
                     "__IMTCONN__": {
-                        "label": "team.gorgonzola@gmail.com"
+                        "label": "team.gorgonzola@gmail.com (team.gorgonzola@gmail.com)"
                     },
                     "spreadsheetId": {
                         "label": "CheckupList"

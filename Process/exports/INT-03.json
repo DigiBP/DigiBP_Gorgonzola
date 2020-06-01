@@ -1,5 +1,5 @@
 {
-    "name": "Check JobTitle is on RAV List (INTG-02)",
+    "name": "Check job registration check-up list (INT-03)",
     "flow": [
         {
             "id": 1,
