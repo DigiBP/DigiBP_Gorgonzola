@@ -15,7 +15,8 @@ Welcome to our Gorgonzola page! We are pleased to present the Digitalization of 
 * [8. Presentation](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/8.-Presentation)
 
 
-
+## Team Members
+Aladin Ermel, Eliane Brufatto Pereira, Patrapan Sangsongsuk
 
 ## Supervisor
 - Emanuele Laurenzi
