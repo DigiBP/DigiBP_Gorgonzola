@@ -12,6 +12,7 @@ Welcome to our Gorgonzola Wiki-page! We are pleased to present the Digitalizatio
 * [5. Conclusion](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/5.-Conclusion)
 * [6. References](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/6.-References)
 * [7. Appendix](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/7.-Appendix)
+* [8. Presentation](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/8.-Presentation)
 
 
 
