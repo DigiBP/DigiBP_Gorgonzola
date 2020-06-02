@@ -18,5 +18,5 @@ Welcome to our Gorgonzola page! We are pleased to present the Digitalization of 
 
 
 ## Supervisor
-- [Emanuele Laurenzi]
+- Emanuele Laurenzi
 
