@@ -1,0 +1,321 @@
+{
+    "name": "Publish on the external portal (INT-06)",
+    "flow": [
+        {
+            "id": 1,
+            "module": "gateway:CustomWebHook",
+            "version": 1,
+            "parameters": {
+                "hook": 385001,
+                "maxResults": 2
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "hook": {
+                        "label": "PublishOnExternalJobPortal"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "hook",
+                        "type": "hook",
+                        "label": "Webhook",
+                        "required": true
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of results"
+                    }
+                ],
+                "interface": [],
+                "advanced": true
+            }
+        },
+        {
+            "id": 2,
+            "module": "google-sheets:addRow",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 1192150
+            },
+            "mapper": {
+                "mode": "select",
+                "values": {
+                    "0": "{{1.jobTitle}}",
+                    "1": "{{1.jobRequirements}}",
+                    "2": "{{now}}",
+                    "3": "{{1.caseReference}}",
+                    "4": "{{1.jobPublicationLink}}",
+                    "5": "{{1.jobContractType}}",
+                    "6": "{{1.jobEmploymentType}}",
+                    "7": "{{1.jobExperienceLevel}}",
+                    "8": "{{1.jobExperienceYears}}",
+                    "9": "{{1.jobLocation}}"
+                },
+                "sheetId": "ExternalJobs",
+                "spreadsheetId": "1KNyCFjy7IsU_U4rvr7gN48X4yQlhZGm8Lbqy_8JrWIs",
+                "includesHeaders": true,
+                "insertDataOption": "INSERT_ROWS",
+                "valueInputOption": "USER_ENTERED"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "mode": {
+                        "label": "Select spreadsheet and sheet"
+                    },
+                    "sheetId": {
+                        "label": "ExternalJobs"
+                    },
+                    "__IMTCONN__": {
+                        "label": "team.gorgonzola@gmail.com (team.gorgonzola@gmail.com)"
+                    },
+                    "spreadsheetId": {
+                        "label": "CheckupList"
+                    },
+                    "includesHeaders": {
+                        "label": "Yes"
+                    },
+                    "insertDataOption": {
+                        "mode": "chose",
+                        "label": "Insert rows"
+                    },
+                    "valueInputOption": {
+                        "mode": "chose",
+                        "label": "User entered"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "mode",
+                        "type": "select",
+                        "label": "Mode",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "select",
+                                "map"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "valueInputOption",
+                        "type": "select",
+                        "label": "Value input option",
+                        "validate": {
+                            "enum": [
+                                "USER_ENTERED",
+                                "RAW"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "insertDataOption",
+                        "type": "select",
+                        "label": "Insert data option",
+                        "validate": {
+                            "enum": [
+                                "INSERT_ROWS",
+                                "OVERWRITE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "select",
+                        "label": "Spreadsheet",
+                        "required": true
+                    },
+                    {
+                        "name": "sheetId",
+                        "type": "select",
+                        "label": "Sheet",
+                        "required": true
+                    },
+                    {
+                        "name": "includesHeaders",
+                        "type": "select",
+                        "label": "Table contains headers",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "name": "values",
+                        "spec": [
+                            {
+                                "name": "0",
+                                "type": "text",
+                                "label": "JobTitle (A)"
+                            },
+                            {
+                                "name": "1",
+                                "type": "text",
+                                "label": "JobRequirements (B)"
+                            },
+                            {
+                                "name": "2",
+                                "type": "text",
+                                "label": "CreationTime (C)"
+                            },
+                            {
+                                "name": "3",
+                                "type": "text",
+                                "label": "Case Reference (D)"
+                            },
+                            {
+                                "name": "4",
+                                "type": "text",
+                                "label": "(E)"
+                            },
+                            {
+                                "name": "5",
+                                "type": "text",
+                                "label": "(F)"
+                            },
+                            {
+                                "name": "6",
+                                "type": "text",
+                                "label": "(G)"
+                            },
+                            {
+                                "name": "7",
+                                "type": "text",
+                                "label": "(H)"
+                            },
+                            {
+                                "name": "8",
+                                "type": "text",
+                                "label": "(I)"
+                            },
+                            {
+                                "name": "9",
+                                "type": "text",
+                                "label": "(J)"
+                            },
+                            {
+                                "name": "10",
+                                "type": "text",
+                                "label": "(K)"
+                            },
+                            {
+                                "name": "11",
+                                "type": "text",
+                                "label": "(L)"
+                            },
+                            {
+                                "name": "12",
+                                "type": "text",
+                                "label": "(M)"
+                            },
+                            {
+                                "name": "13",
+                                "type": "text",
+                                "label": "(N)"
+                            },
+                            {
+                                "name": "14",
+                                "type": "text",
+                                "label": "(O)"
+                            },
+                            {
+                                "name": "15",
+                                "type": "text",
+                                "label": "(P)"
+                            },
+                            {
+                                "name": "16",
+                                "type": "text",
+                                "label": "(Q)"
+                            },
+                            {
+                                "name": "17",
+                                "type": "text",
+                                "label": "(R)"
+                            },
+                            {
+                                "name": "18",
+                                "type": "text",
+                                "label": "(S)"
+                            },
+                            {
+                                "name": "19",
+                                "type": "text",
+                                "label": "(T)"
+                            },
+                            {
+                                "name": "20",
+                                "type": "text",
+                                "label": "(U)"
+                            },
+                            {
+                                "name": "21",
+                                "type": "text",
+                                "label": "(V)"
+                            },
+                            {
+                                "name": "22",
+                                "type": "text",
+                                "label": "(W)"
+                            },
+                            {
+                                "name": "23",
+                                "type": "text",
+                                "label": "(X)"
+                            },
+                            {
+                                "name": "24",
+                                "type": "text",
+                                "label": "(Y)"
+                            },
+                            {
+                                "name": "25",
+                                "type": "text",
+                                "label": "(Z)"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Values"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": false,
+            "sequential": false,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.integromat.com"
+    }
+}
