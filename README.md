@@ -12,7 +12,8 @@ Welcome to our Gorgonzola page! We are pleased to present the Digitalization of 
 * [5. Conclusion](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/5.-Conclusion)
 * [6. References](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/6.-References)
 * [7. Appendix](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/7.-Appendix)
-* [8. Presentation](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/8.-Presentation)
+* [8. Process Demos](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/8.-Process-Demos)
+* [9. Presentation](https://github.com/DigiBP/DigiBP_Gorgonzola/wiki/8.-Presentation)
 
 
 ## Team Members
